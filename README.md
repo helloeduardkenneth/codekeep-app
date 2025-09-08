@@ -65,14 +65,10 @@ Save, organize, and access your code snippets anywhere.
 git clone https://github.com/yourusername/codekeep.git
 cd codekeep
 
-markdown
-Copy code
 
 2. Install dependencies  
 pnpm install
 
-markdown
-Copy code
 
 3. Configure environment  
 Create a `.env` file in the root folder:  
@@ -80,20 +76,13 @@ DATABASE_URL=your_database_url_here
 NEXTAUTH_SECRET=your_secret_here
 NEXTAUTH_URL=http://localhost:3000
 
-pgsql
-Copy code
-
 4. Set up the database  
 npx prisma migrate dev --name init
 
-markdown
-Copy code
 
 5. Run the development server  
 pnpm dev
 
-yaml
-Copy code
 
 Visit: http://localhost:3000  
 
