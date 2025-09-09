@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📝 CodeKeep
 
-## Getting Started
+CodeKeep is a modern **code snippet manager** built with **Next.js 15+, TypeScript, TailwindCSS, shadcn/ui, and Zustand**.  
+Save, organize, and access your code snippets anywhere.  
 
-First, run the development server:
+## ✨ Features
+- 🔐 User authentication (per-user snippet storage)  
+- 💾 Snippet management (create, edit, delete, search)  
+- 🎨 Clean UI with TailwindCSS + shadcn/ui  
+- ⚡ Global state management with Zustand  
+- 📂 Code editor support (syntax highlighting planned)  
+- ☁️ Free-tier friendly deployment on Vercel + Supabase  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
+---
+
+## 📦 Tech Stack
+- Next.js 15+ (App Router)  
+- TypeScript  
+- TailwindCSS  
+- shadcn/ui  
+- Zustand  
+- Prisma + PostgreSQL (Supabase free-tier)  
+- NextAuth.js for authentication  
+
+---
+
+## 💰 Pricing (Educational Example)
+| Plan       | Price        | Features |
+|------------|-------------|----------|
+| **Free**   | $0           | 20 snippets, no tags |
+| **Pro**    | $5 / month   | Unlimited snippets, tagging, syntax themes |
+| **Team**   | $15 / month  | Everything in Pro + team sharing, workspaces |
+
+*(Currently for educational use only – billing integration TBD)*  
+
+---
+
+## 🚀 Roadmap
+### MVP (Free Tier)
+- [ ] Authentication (NextAuth + Supabase/Postgres)  
+- [ ] CRUD for snippets  
+- [ ] Limit: 20 snippets per user  
+- [ ] Basic search functionality  
+
+### Pro Tier (Planned)
+- [ ] Unlimited snippets  
+- [ ] Tagging system  
+- [ ] Syntax highlighting & custom themes  
+
+### Team Tier (Planned)
+- [ ] Team workspaces  
+- [ ] Invite & manage members  
+- [ ] Share snippets  
+
+### Future Improvements
+- [ ] Dark mode toggle  
+- [ ] AI-powered snippet search  
+- [ ] Public snippet sharing with unique links  
+
+---
+
+## 🛠️ Getting Started
+
+1. Clone the repository  
+git clone https://github.com/yourusername/codekeep.git
+cd codekeep
+
+
+2. Install dependencies  
+pnpm install
+
+
+3. Configure environment  
+Create a `.env` file in the root folder:  
+DATABASE_URL=your_database_url_here
+NEXTAUTH_SECRET=your_secret_here
+NEXTAUTH_URL=http://localhost:3000
+
+4. Set up the database  
+npx prisma migrate dev --name init
+
+
+5. Run the development server  
 pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Visit: http://localhost:3000  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ☁️ Deployment
 
-To learn more about Next.js, take a look at the following resources:
+### Vercel (Frontend)
+1. Push the repo to GitHub  
+2. Connect your repo to Vercel  
+3. Add environment variables in the Vercel dashboard  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Supabase (Database & Auth)
+1. Create a free project in Supabase  
+2. Copy the project database URL → use as `DATABASE_URL`  
+3. Enable authentication providers if needed  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📸 Screenshots (coming soon)
+- Dashboard  
+- Snippet editor  
+- Pricing page  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome!  
+Check the issues page.  
+
+---
+
+## 📜 License
+This project is licensed under the MIT License.  
